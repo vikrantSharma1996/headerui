@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
@@ -6,7 +7,7 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   li {
-    padding: 18px 10px;
+    padding: 0px 10px 10px 10px ;
   }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -27,12 +28,12 @@ const Ul = styled.ul`
 
 const RightNav = ({ open }) => {
   return (
-    <Ul open={open} style={{fontWeight:"bold"}}>
-      <li>MENU</li>
-      <li>STORY</li>
-      <li>CATERING</li>
-      <li>REWARDS</li>
-      <li>DONATE</li>
+    <Ul className="right" open={open} style={{fontWeight:"bold"}}>
+      <li><NavLink to='/'>MENU</NavLink></li>
+      <li><NavLink to='/'>STORY</NavLink></li>
+      <li><NavLink to='/'>CATERING</NavLink></li>
+      <li><NavLink to='/'>REWARDS</NavLink></li>
+      <li><NavLink to='/'>DONATE</NavLink></li>
     </Ul>
   )
 }

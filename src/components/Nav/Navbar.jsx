@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import Burger from './Burger';
+import {connect} from 'react-redux'
 
 const Nav = styled.nav`
   width: 100%;
@@ -10,19 +12,26 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   .logo {
-    padding: 15px 0;
+    padding: 0px 10px 10px 10px;
   }
 `
 
 const Navbar = () => {
   return (
-    <Nav>
+    <Nav className="nav-wrapper black darken-3">
       <div className="logo" style={{fontWeight:"bold"}}>
-        Protien bar and kitchen
+      <Link to='/' className="brand-logo">Protien bar and kitchen</Link>
       </div>
       <Burger />
     </Nav>
   )
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+  console.log(state);
+  return{
+    // auth: state.firebase.auth
+  }
+}
+
+export default connect(mapStateToProps)(Navbar)
