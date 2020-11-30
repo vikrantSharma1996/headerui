@@ -29,7 +29,7 @@ const items = [
       onDragStart={handleDragStart}
       className="sliderimg"
     />
-    <div class="text-block">
+    <div class="centered">
       <h1>THANKFUL FOR FREE DELIVERY</h1>
       <p>Score free delivery on any size order for a limited time</p>
     </div>

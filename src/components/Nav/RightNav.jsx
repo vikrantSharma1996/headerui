@@ -34,6 +34,7 @@ const RightNav = ({ open }) => {
       <li><NavLink to='/'>CATERING</NavLink></li>
       <li><NavLink to='/'>REWARDS</NavLink></li>
       <li><NavLink to='/'>DONATE</NavLink></li>
+      <li><NavLink to='/login'>LOGIN</NavLink></li>
     </Ul>
   )
 }
